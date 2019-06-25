@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>対話システムライブコンペティション</title>
+<meta name="Description" content="対話システムライブコンペティションのページです" />
+<meta name="Keywords" content="対話システムライブコンペティション,対話システムライブコンペ,ライブコンペ,対話システム,対話,雑談" />
+
+<!-- BootstrapのCSS読み込み -->
+<link href="dialog_log/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery読み込み -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- BootstrapのJS読み込み -->
+<script src="dialog_log/js/bootstrap.min.js"></script>
+
+<link rel="icon" href="http://saetl.net/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" type="img/x-icon" href="http://saetl.net/favicon.ico" />
+<link rel="stylesheet" href="css/style.css">
+<link href='https://fonts.googleapis.com/css?family=Berkshire+Swash|Lobster' rel='stylesheet' type='text/css'><!--googlewebフォント-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><!--アイコンwebフォント-->
+<link rel="stylesheet" href="css/vertical-responsive-menu.css" /><!--レスポンシブメニュー-->
+<link rel="stylesheet" href="css/twilight.css"><!--スライドショー-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<noscript>
+<p>※このページはJavaScriptを使用しています。JavaScript設定を有効にしてご覧ください。</p>
+</noscript>
+
+<!--ヘッダー-->
+<header class="header clearfix">
+  <button type="button" id="toggleMenu" class="toggle_menu"> <i class="fa fa-bars"></i> </button>
+
+  <!--ロゴ（ページ左上のサイト名）-->
+  <h1><a href="index.html" title="対話システムライブコンペティション">対話システムライブコンペティション</a></h1>
+
+  <!--ページ右上の表示-->
+  <!-- <div class="terms info"><a href="terms.html">
+    <ul>
+      <li><i class="fa fa-info-circle fa-2x"></i></li>
+      <li>利用規約</li>
+    </ul>
+    </a></div>
+  <div class="contact info"><a href="contact.html">
+    <ul>
+      <li><i class="fa fa-envelope-o fa-2x"></i> </li>
+      <li>お問い合わせ</li>
+    </ul>
+    </a>
+  </div> -->
+</header>
+
+<!--ナビゲーションメニューー-->
+<nav class="vertical_nav">
+  <ul id="js-menu" class="menu">
+    <li class="menu--item"> <a href="index.html" class="menu--link" title="Home"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">Home</span> </a> </li>
+    <li class="menu--item"> <a href="system.html" class="menu--link" title="Home"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">システム仕様</span> </a> </li>
+    <li class="menu--item"> <a href="gettingstart.html" class="menu--link" title="Getting Started"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">Getting Started</span> </a> </li>
+    <li class="menu--item"> <a href="evaluation.html" class="menu--link" title="Evaluation"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">評価基準・評価方法</span> </a> </li>
+    <li class="menu--item"> <a href="caution.html" class="menu--link" title="Evaluation"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">発表形態</span> </a> </li>
+    <!-- <li class="menu--item"> <a href="livecompetition.html" class="menu--link" title="LiveComp"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">ライブコンペ</span> </a> </li> -->
+    <li class="menu--item"> <a href="score.html" class="menu--link" title="Score"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">スコア</span> </a> </li>
+    <li class="menu--item"> <a href="logdata.html" class="menu--link" title="Logdata"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">対話ログ</span> </a> </li>
+    <li class="menu--item"> <a href="presentation.html" class="menu--link" title="Presentation"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">当日の発表</span> </a> </li>
+    <li class="menu--item"> <a href="inquiry.html" class="menu--link" title="Inquiry"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">お問い合わせ</span> </a> </li>
+
+  </ul>
+  <button id="collapse_menu" class="collapse_menu"> <i class="collapse_menu--icon  fa fa-fw"></i> <span class="collapse_menu--label">Recolher menu</span> </button>
+
+  <!--ページ左下の表示-->
+  <p class="copyright">Copyright &copy; 2018 <br/>
+    DIALOGUE SYSTEM  <br/>
+    LIVE COMPETITION  <br/>
+    All Rights Reserved.</p>
+</nav>
+<div class="wrapper">
+  <div class="content">
+
+    <!--スライドショー-->
+    <!-- <div class="twilight-wrapper">
+      <div class="slide-wrapper">
+        <div class="twilight-show">
+          <div class="twilight-box">
+            <div><img src="images/slide1.png" alt="スライドショー" /></div>
+            <div><img src="images/slide2.png" alt="スライドショー" /></div>
+            <div><img src="images/slide3.png" alt="スライドショー" /></div>
+            <div><img src="images/slide4.png" alt="スライドショー" /></div>
+            <div><img src="images/slide5.png" alt="スライドショー" /></div>
+          </div>
+          <div class="arrow-right"></div>
+        </div>
+      </div>
+    </div> -->
+
+    <!--ページのメイン部分-->
+    <article>
+     
+
+      <h2>発表資料</h2>
+      <section>
+	<ul>
+	  <li>
+	    以下に発表資料を発表の順序に掲載します．
+	  </li>
+	</ul>
+	<div class="list">
+	<ul>
+	  <li><div class="linkstr"><a href=docs/livecomp_mariko_r1.pdf>NTTdocomo</a></div></li>
+	  <li><div class="linkstr"><a href=docs/SLUD_livecomp_tohoku_univ.pdf>teamzunko</a></div></li>
+	  <li><div class="linkstr"><a href=docs/slud20181121_sugiyama_vf.pdf>NTTCS</a></div></li>
+	</ul>
+	</div>
+      </section>
+
+      <h2>発表動画</h2>
+<section>
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/J7wLWeSyd1c" frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope;
+picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/qOWybeSApGo" frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope;
+picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/Upx6kt6tsg8" frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope;
+picture-in-picture" allowfullscreen></iframe>
+</section>
+
+        <!-- <h3>リンク</h3> -->
+	<!-- <div class="linkstr"><a href=https://goo.gl/forms/to5QN242Iw9vzGxl1> アンケート(事前) </a></div> -->
+	<!-- <div class="linkstr"><a href=https://goo.gl/forms/qYPaZJpwxaMwTgQ42> MarikoZatsudanBot 1回目 </a> <br>(NTTドコモの方は評価をご遠慮ください)</div> -->
+	<!-- <div class="linkstr"><a href=https://goo.gl/forms/k0wRH0Pzl2KVrb3l2> MarikoZatsudanBot 2回目 </a> <br>(NTTドコモの方は評価をご遠慮ください)</div> -->
+	<!-- <div class="linkstr"><a href=https://goo.gl/forms/6yX9IaWttNTY6bsa2> tripfreak 1回目         </a> <br>(NTT(持株会社)の方は評価をご遠慮ください)</div> -->
+	<!-- <div class="linkstr"><a href=https://goo.gl/forms/Bq7KQuptV12Hp2cI3> tripfreak 2回目         </a> <br>(NTT(持株会社)の方は評価をご遠慮ください)</div> -->
+	<!-- <div class="linkstr"><a href=https://goo.gl/forms/nePIN6BO7UlCACsk1> zunko 1回目             </a> <br>(東北大学の方は評価をご遠慮ください)</div> -->
+	<!-- <div class="linkstr"><a href=https://goo.gl/forms/OOAzz7FEuQuSIAS43> zunko 2回目             </a> <br>(東北大学の方は評価をご遠慮ください)</div> -->
+	<!-- <div class="linkstr"><a href=https://goo.gl/forms/ju85M6AWIvsSKtJf2> アンケート(事後) </a></div> -->
+
+      </section>
+      <!-- <h2>About</h2>
+      <section>
+        <ul>
+          <li> 対話システムシンポジウムから，<a href="https://dbd-challenge.github.io/dbdc3/index.html"/>対話破綻検出チャレンジ</a>は始まりました．
+          <li> 本チャレンジは，昨年度，対話システムシンポジウムを離れ，国際イベントとなりました．
+          <li> 対話破綻検出チャレンジのデータは，対話研究への参入を容易にしたり，現状の対話システムの問題点を明らかにしたりすることに役立ってきたと考えています．
+          <li> しかし，その一方で，固定の対話コーパスに対してアルゴリズムを競う形式であるために，対話のライブ要素があまり検討されてこなかったという問題点もありました．
+          <br/>
+          <li> そこで，このたび，よりライブ性の高いイベントを行うことにより，対話システムにおけるよりリアルな難しさや面白さをシンポジウム参加者全員で共有できるようなイベントを行いたいと考えました．
+          <li> それが「<b>対話システムライブコンペティション（ライブコンペ）</b>」です．
+        </ul>
+      </section> -->
+
+
+
+    </article>
+
+    <!-- / .content -->
+  </div>
+  <!-- / .wrapper -->
+</div>
+
+<!--javascript設定-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> <!--googleのCDN（ネットワーク経由でコンテンツを提供するサービス）よりjqueryをロード-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> <!--エフェクト効果-->
+<script src="js/vertical-responsive-menu.min.js" ></script> <!--レスポンシブメニュー-->
+<script src="js/twilight.js"></script> <!--スライドショー-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.twilight-show').twilight();
+});
+setTimeout(function() {
+    $(".arrow-right").click();
+    setTimeout(arguments.callee, 5000);
+}, 3000);
+</script>
+<script src="js/scrolltopcontrol.js"></script> <!--スクロールしながらページのトップに戻る-->
+
+</body>
+</html>
