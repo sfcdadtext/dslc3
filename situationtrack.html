@@ -94,9 +94,44 @@
       <h2>シチュエーショントラックのシステム仕様・評価について</h2>
       <hr size="7" width="30%" color="#3f4c6b">
       <ul>
-        <li>シチュエーショントラックでは，システムが<B>指定されたシチュエーションにおいていかに人らしく会話をしたか</B>を競います。
-          システム仕様・評価基準は以下の通りです。(オープントラックは<a href="opentrack.html"><font color="red">こちらのページ</font></a>をご覧ください)</li>
+        <li>シチュエーショントラックでは，システムが<B>指定されたシチュエーションにおいていかに人らしく会話をしたか</B>を競います。</li>
+        <li>システム仕様・評価基準は本ページに則るものとします。(オープントラックは<a href="opentrack.html"><font color="red">こちらのページ</font></a>をご覧ください)</li>
       </ul>
+      
+      <h2>満たすべきシステムの仕様</h2>
+      <hr size="7" width="30%" color="#3f4c6b">
+      <section>
+        <ol>
+          <li>評価の観点から，ボットは以下の仕様を満たすように作成してください．</li>
+          <!-- <li>※<a href="gettingstart.html"><font color="red">Getting Started</font></a>で使用している<a href="samplebot9.py"><font color="red">samplebot9.py</font></a>のボットでは，これらを満たすように実装されています．</li> -->
+        </ol>
+        <br/>
+        <li>次項の<a href="#situation"><font color="red">シチュエーション</font></a>で行われる会話として作成してください．</li>
+        <li>評価の都合上，システムからの発話は１ターンあたり１発話とし，発話内には改行を含めないようにしてください．</li>
+        <li>対話以外の要素に評価が左右されることを防ぐために，Telegram上のアイコン画像や発話外でのプロフィール提示は使用しないでください．</li>
+        <li>システム発話はテキストのみとし，絵文字・顔文字・スタンプは不可とします．<br/>
+        　 ユーザからの発話もテキストのみが渡される前提でシステムを用意してください．</li>
+        <br/>
+        <li>16発話以上システム発話が継続するようにしてください．<br/>
+         　 ※オーガナイザが判断した場合は，より長い対話とする可能性もあります．</li>
+        <li>ユーザからの 15発話目を受け取り，システムが 16発話目を発話した後に，<br/>
+        　 "_FINISHED_:"に続けてユニークIDを発話として出力してください．ユニークIDは "unixtime:ユーザID:ボットのusername"から生成する文字列とします．<br/>
+        　 （例：_FINISHED_:1536932911:654708492:LiveCompetition2018_bot）<br/>
+        　 ※"unixtime:ユーザID"は IDをユニークにするために，またボットのusernameは対話システムを識別するために用います．</li>
+        <li>"_FINISHED_:[unixtime]:[ユーザID]:[ボットのusername]"を出力後，アノテータへの指示として以下の発話を出力してください．<br/>
+        　 "対話終了です．エクスポートした「messages.html」ファイルを，フォームからアップロードしてください．"</li>
+      </section>
+      
+      <h2 id="situation">シチュエーション</h2>
+      <hr size="7" width="30%" color="#3f4c6b">
+       <section>
+        <ol>
+          <li>評価の観点から，ボットは以下の仕様を満たすように作成してください．</li>
+          <!-- <li>※<a href="gettingstart.html"><font color="red">Getting Started</font></a>で使用している<a href="samplebot9.py"><font color="red">samplebot9.py</font></a>のボットでは，これらを満たすように実装されています．</li> -->
+        </ol>
+        <br/>
+      </section>
+      
       <h2>評価基準</h2>
       <hr size="7" width="30%" color="#3f4c6b">
       <section>
