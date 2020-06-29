@@ -51,6 +51,7 @@
 <nav class="vertical_nav">
   <ul id="js-menu" class="menu">
     <li class="menu--item"> <a href="index.html" class="menu--link" title="Home"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">Home</span> </a> </li>
+    <li class="menu--item"> <a href="entry.html" class="menu--link" title="Open"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">エントリ</span> </a> </li>
     <li class="menu--item"> <a href="opentrack.html" class="menu--link" title="Open"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">オープントラック</span> </a> </li>
     <li class="menu--item"> <a href="situationtrack.html" class="menu--link" title="Situation"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">シチュエーショントラック</span> </a> </li>
     <li class="menu--item"> <a href="gettingstart.html" class="menu--link" title="Getting Started"> <i class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">Getting Started</span> </a> </li>
@@ -94,40 +95,41 @@
 
     <!--ページのメイン部分-->
     <article>
-      <h2>発表について</h2>
-      <hr size="7" width="30%" color="#3f4c6b">
+      <h2>エントリについて</h2>
+      
       <section>
       <ul>
-        <li>対話システムシンポジウム内の対話システムライブコンペティションセッションにおいて，自身の開発したシステムについて発表することが可能です．
-      </ul>
-        <li>予選を勝ち残ったチームは，ライブイベントにおいて発表いただき，予稿も執筆いただきます．
-        <li>ライブイベントに出場しないチームにつきましては，発表および予稿執筆は任意です．</li>
-      <br/>
-      <ul>
-        <!-- <li>予選を勝ち残ったチームおよびライブイベントに出場しないチームで発表を希望する場合は，<b>2018年10月17日</b>までに，<a href="https://goo.gl/forms/qiUdhtL9STFzPxpj2"><font color="red">こちらのフォーム</font></a>より発表申し込みを行って下さい．</li> -->
-        <li>予選を勝ち残ったチームおよびライブイベントに出場しないチームで発表を希望する場合は，<b>2018年10月17日</b>までに，発表申し込みを行って下さい．発表申し込み方法については，参加チームにメールで個別でご連絡いたします．</li>
-      </ul>
-
-      <br/>
-      <ul>
-        <li>発表形態（口頭あるいはポスター）については事務局が決定いたします．
-        <li>論文の提出期限は，他のセッションに準じます．
-        <li>投稿原稿のページ数は，口頭発表同様，2ページ，4ページ，6ページのいずれかといたします．
+        <h3><b>開発いただくシステム</b></h3>
+        <li>開発いただくシステムのタイプは，「<b>雑談対話システム（非タスク指向型対話システム）</b>」です．</li>
+        <li>対話システムの作成にあたっては，インスタントメッセージシステム<a href="https://telegram.org/">Telegram</a>上で動作するボットを作成していただきます．</li>
+        <li>ボットは，<a href="opentrack.html"><font color="red"><u>オープントラック</u></font></a>および<a href="situationtrack.html"><font color="red"><u>シチュエーショントラック</u></font></a>それぞれに記載されているシステム仕様の要件を満たす必要があります．</li>
+        <li>ボットの作成方法については，<a href="gettingstart.html"><font color="red"><u>Getting Started</u></font></a>をご覧ください．</li>
       </ul>
       </section>
 
-
-      <h2>組織名の公開</h2>
-      <hr size="7" width="30%" color="#3f4c6b">
       <section>
-      <li> 予選を勝ち残った参加者については，所属組織を公表します．その他の組織については，原則非公開としますが，公開を希望される場合はその限りではありません．
-      </section>
-
-
-      <h2>データ公開</h2>
-      <hr size="7" width="30%" color="#3f4c6b">
-      <section>
-        <li>予選における対話ログについては原則非公開としますが，本選における対話ログは公開される場合があります．
+        <ul>
+          <h3><b>エントリ方法</b></h3>
+          <!-- <li>Google Formにてエントリいただきます．URLが確定次第，本HPにてお知らせします．</li>
+          <li>※ 複数の組織を横断してチームを結成しても構いません．</li>
+          <br/> -->
+        <li><a href="https://forms.gle/1Xqy9gde7wKCm1977"><font color="red"><u>こちらのフォーム</u></font></a>よりエントリください．</li>
+        <li>エントリには，下記の情報が必要です．</li>
+        
+          <li><b>必要事項</b></li>
+          <li>・チーム名（半角英数字のみ使用可）</li>
+          <li>・Telegram ボット名<br/>
+            　 ※BotFatherの「How are we going to call it? Please choose a name for your bot.」に対して入力した値<br/>
+            　 ※半角英数字のみ使用可</li>
+          <li>・Telegram ボットのusername<br/>
+            　 ※BotFatherの「Now let's choose a username for your bot. It must end in `bot`. Like this, for example: TetrisBot or tetris_bot.」に対して入力した値<br/>
+            　 ※半角英数字のみ使用可で，最後はbotで終わる名前（例：TetrisBot や tetris_bot
+          </li>
+          <li>・代表者のお名前</li>
+          <li>・代表者のメールアドレス</li>
+          <li>・代表者の所属</li>
+          <li>・ボット概要（任意）</li>
+        </ul>
       </section>
 
 

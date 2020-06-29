@@ -11,43 +11,43 @@ import json
 # アクセストークン
 TOKEN = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-### Repl-AI
-# APIキー
-APIKEY = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+### sunaba
 # BOTID
-BOTID = "sample"
+BOTID = "YYYYYYYYYY"
 # 最初のTopicId
-TopicId = "aisatsu"
+TopicId = "ZZZZZZZZZZ"
 
 # 1対話の長さ(ユーザの発話回数)．ここは固定とする
 DIALOGUE_LENGTH = 15
 
-"""Repl-AIで作成したボットと接続するTelegramボット"""
+"""SUNABAで作成したボットと接続するTelegramボット"""
 
 # 対話履歴を受け取り，応答を返す．
 # ここを各自書き換えれば自分のシステムができる
 def reply(user_utterance, count, appid):
-    # Repl-AIのリクエストURL(dialogue)
-    url = "https://api.repl-ai.jp/v1/dialogue"
+    # リクエストURL(dialogue)
+    url = "https://api-sunaba.xaiml.docomo-dialog.com/dialogue"
     # initTalkingFlagの有無
-    if count == 0:
+    if count == 1:
         # リクエスト
         payload = {
-          "appUserId": appid,
+          "appId": appid,
           "botId": BOTID,
           "voiceText": user_utterance,
+          "language": "ja-JP",
           "initTalkingFlag": "true",
           "initTopicId": TopicId
         }
     else:
         # リクエスト
         payload = {
-          "appUserId": appid,
+          "appId": appid,
           "botId": BOTID,
           "voiceText": user_utterance,
+          "language": "ja-JP",
           "initTalkingFlag": "false"
         }
-    headers = {'Content-type': 'application/json', 'x-api-key' : APIKEY}
+    headers = {'Content-type': 'application/json;charset=UTF-8'}
     # リクエスト送信
     r = requests.post(url, data=json.dumps(payload), headers=headers)
     data = r.json()
@@ -60,24 +60,21 @@ class SampleBot:
         self.user_context = {}
 
     def start(self, bot, update):
-        # Repl-AIのリクエストURL(registration)
-        url = "https://api.repl-ai.jp/v1/registration"
+        # リクエストURL(registration)
+        url = "https://api-sunaba.xaiml.docomo-dialog.com/registration"
         # リクエスト
         payload = {
-          "botId":BOTID
+          "botId":BOTID,
+          "appKind": "sunaba",
+          "notification" : "false"
         }
-        headers = {'Content-type': 'application/json', 'x-api-key' : APIKEY}
+        headers = {'Content-type': 'application/json;charset=UTF-8'}
         # リクエスト送信
         r = requests.post(url, data=json.dumps(payload), headers=headers)
         data = r.json()
 
         # 対話ログと発話回数を初期化
-        self.user_context[update.message.from_user.id] = {"context": [], "count": 0, "appid": data['appUserId']}
-
-        # Repl-AIのBOTにinitを送信
-        send_message = reply("init", self.user_context[update.message.from_user.id]["count"], self.user_context[update.message.from_user.id]["appid"])
-        update.message.reply_text(send_message)
-
+        self.user_context[update.message.from_user.id] = {"context": [], "count": 0, "appid": data['app_id']}
 
     def message(self, bot, update):
         if update.message.from_user.id not in self.user_context:
